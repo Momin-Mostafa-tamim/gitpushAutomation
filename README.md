@@ -8,4 +8,4 @@ authenticationToken
 github.com/user-name/reponame
 
 
-## add "data.txt" to git ignore file
+### add "data.txt" to git ignore file
