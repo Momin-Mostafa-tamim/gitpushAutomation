@@ -4,16 +4,6 @@
 #define dataInDatafile 3
 #define fileName "data.txt"
 
-void init(std::string username, std::string password)
-{
-    std::string path = fileName;
-    std::ofstream out;
-    out.open(path);
-    out << username << '\n'
-        << password;
-    out.close();
-}
-
 void Push()
 {
     std::string inputFromDataFile[3];
@@ -26,6 +16,12 @@ void Push()
     // string To Char -------start
     std::string finalCommandStr = "";
     finalCommandStr += "git push https://" + inputFromDataFile[0] + ":" + inputFromDataFile[1] + "@" + inputFromDataFile[2];
+
+    /*
+        inputFromDataFile[0] = username
+        inputFromDatafile[1] = password
+        inputFromDatafile[3] = github Path
+    */
     int lenOffinalCommand = finalCommandStr.size();
     char finalCommand[lenOffinalCommand - 3];
 
@@ -35,10 +31,6 @@ void Push()
     }
 
     // string To Char ------end
-
-    // std::cout << finalCommand << std::endl;
-
-    // git push https://user:pass@yourrepo.com/path HEAD
 
     system(finalCommand);
 }
