@@ -61,7 +61,7 @@ void init()
 
     generate.close();
 }
-
+//TODO : add git add and git commit .
 int main(int argc, char *argv[])
 {
 
